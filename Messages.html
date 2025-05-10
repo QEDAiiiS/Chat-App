@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link
+      rel="stylesheet"
+      href="./Assists/bootstrap-5.3.3-dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./messages.css" />
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+
+
+
+
+    <!-- nav bar  -->
+    <div style="position: relative; margin-bottom: 4rem; width: 100%">
+      <header
+        id="nav-bar"
+        class="d-flex justify-content-between align-items-center p-2 px-5 bg-white fixed-top"
+      >
+        <!-- * logo -->
+        <div class="d-flex gap-3 align-items-center">
+          <a href="index.html">
+            <img
+              style="width: 2.5rem; height: 2.5rem; cursor: pointer"
+              src="./img/logo.svg"
+              alt=""
+            />
+          </a>
+        </div>
+
+        <!-- * links -->
+        <div id="navbar-links" class="d-flex gap-5 align-items-center">
+          <a href="">Overview</a>
+          <a href="">Subscriptions</a>
+          <a href="">Streams</a>
+          <a href="">Library</a>
+          <a href="">Library</a>
+          
+
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M124 88.2302V92.3992C123.998 101.31 120.636 109.856 114.653 116.157C108.67 122.458 100.555 125.998 92.0931 126H44L54.7767 114.791H88.8474C93.6085 114.792 98.2644 113.316 102.234 110.548C106.204 107.78 109.311 103.841 111.168 99.2246C113.026 94.608 113.551 89.5176 112.678 84.5887C111.805 79.6597 109.573 75.1107 106.261 71.5094C106.035 71.2633 105.805 71.0214 105.571 70.7838C101.059 66.1618 95.0093 63.5807 88.7144 63.5913H64.7011L69.0166 53L90.9024 53.3819C99.6794 53.3819 108.097 57.0532 114.304 63.5883C120.511 70.1235 123.998 78.9873 124 88.2302Z" fill="url(#paint0_linear_354_4031)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M113 89.4108C113.003 92.7706 112.383 96.098 111.175 99.2029C109.968 102.308 108.196 105.129 105.962 107.506C103.727 109.882 101.074 111.768 98.1538 113.053C95.2335 114.339 92.1033 115.001 88.9423 115L55 114.93L63.3131 105.603L86.2252 105.884C90.1438 105.884 93.9019 104.23 96.6733 101.285C99.4447 98.3408 101.002 94.3471 101.004 90.1822V89.5001C101.004 87.4376 100.622 85.3953 99.879 83.4899C99.1362 81.5845 98.0475 79.8532 96.6751 78.3951C95.3027 76.937 93.6734 75.7806 91.8804 74.9919C90.0874 74.2032 88.1657 73.7977 86.2252 73.7985L62.9652 73.008L65.0765 64.0002H89.0682C95.2474 63.9772 101.197 66.4891 105.676 71.0126C105.908 71.2506 106.136 71.4929 106.36 71.7394C110.636 76.4987 113.015 82.8304 113 89.4108Z" fill="url(#paint1_linear_354_4031)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M123 35.038V39.2289C122.998 48.1851 119.624 56.7739 113.618 63.1068C107.612 69.4398 99.4663 72.9983 90.9726 73H59.8492L64.8676 61.6235L87.7079 61.7323C94.1631 61.7323 100.354 59.0284 104.918 54.2154C109.483 49.4025 112.047 42.8747 112.047 36.0681C112.047 29.2615 109.483 22.7337 104.918 17.9208C100.354 13.1078 94.1631 10.4039 87.7079 10.4039H29.709L20 0.22395V0H89.7832C94.1461 0.000840181 98.4661 0.907787 102.497 2.66906C106.527 4.43034 110.189 7.01145 113.274 10.265C116.358 13.5186 118.805 17.3809 120.473 21.6315C122.142 25.882 123.001 30.4375 123 35.038Z" fill="url(#paint2_linear_354_4031)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M112 35.9838C111.998 42.8746 109.449 49.4827 104.912 54.3552C100.376 59.2278 94.223 61.9659 87.8071 61.9676L64.9714 62L68.9643 52.6261L85.0446 52.7298C88.9863 52.7298 92.7665 51.0481 95.5536 48.0546C98.3408 45.0611 99.9066 41.0011 99.9066 36.7677V36.0615C99.905 31.8292 98.3385 27.7709 95.5515 24.7788C92.7645 21.7867 88.9852 20.1059 85.0446 20.1059H39.6506L30 10.0324L87.783 10C90.9621 9.99661 94.1106 10.6662 97.0486 11.9705C99.9866 13.2747 102.656 15.1882 104.906 17.6013C107.155 20.0145 108.939 22.8801 110.156 26.0342C111.373 29.1884 112 32.5694 112 35.9838Z" fill="url(#paint3_linear_354_4031)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M41.1654 104.367L57.5805 104.424L0 165L20.0879 124.687H7.52766L27.8645 53H62L41.1654 104.367Z" fill="url(#paint4_linear_354_4031)"/>
+            <path opacity="0.5" d="M41.1648 104.515L57.5804 104.573L1 164L36.8788 112.575L24.8403 112.016L44.0545 53H62L41.1648 104.515Z" fill="url(#paint5_linear_354_4031)"/>
+            <path d="M42.5 49C49.4036 49 55 42.9558 55 35.5C55 28.0442 49.4036 22 42.5 22C35.5964 22 30 28.0442 30 35.5C30 42.9558 35.5964 49 42.5 49Z" fill="#FCFCFC" fill-opacity="0.9"/>
+            <path style="mix-blend-mode:overlay" d="M43.9385 23C37.079 23 31.0307 28.8256 31 35.9936C31.8161 35.3405 32.6723 34.744 33.5631 34.208C33.9742 31.6422 35.2426 29.3117 37.1428 27.6309C39.043 25.95 41.452 25.0276 43.9416 25.0276C46.4312 25.0276 48.8402 25.95 50.7404 27.6309C52.6406 29.3117 53.909 31.6422 54.3201 34.208C55.0577 34.7539 56.3485 35.3513 57 36C56.9754 28.8256 50.8043 23 43.9385 23Z" fill="url(#paint6_linear_354_4031)"/>
+            <path d="M43 50C50.1797 50 56 43.9558 56 36.5C56 29.0442 50.1797 23 43 23C35.8203 23 30 29.0442 30 36.5C30 43.9558 35.8203 50 43 50Z" fill="url(#paint7_linear_354_4031)"/>
+            <path style="mix-blend-mode:overlay" d="M37 40C42.5228 40 47 36.1944 47 31.5C47 26.8056 42.5228 23 37 23C31.4772 23 27 26.8056 27 31.5C27 36.1944 31.4772 40 37 40Z" fill="url(#paint8_radial_354_4031)" fill-opacity="0.8"/>
+            <path d="M173.617 14.6246H160.577V56.4704H151.367V14.6246H139.428V4.70215H173.617V14.6246Z" fill="white"/>
+            <path d="M188.405 25.5583H204.826V4.70215H213.973V56.4704H204.816V35.6142H188.395V56.4704H179.065V4.70215H188.405V25.5583Z" fill="white"/>
+            <path d="M256.454 14.4911H236.088C233.234 14.4911 231.804 15.9028 231.804 18.649V25.5583H254.832V35.6142H231.804V41.4507C231.804 44.8694 232.905 46.5479 235.112 46.5479H256.517V56.4704H236.605C226.419 56.4704 222.464 51.4399 222.464 40.5113V19.4652C222.464 9.19882 227.003 4.7124 236.928 4.7124H256.454V14.4911Z" fill="white"/>
+            <path d="M314.777 19.5422C314.777 24.9167 313.932 27.7553 311.531 30.3578C314.062 33.1092 315.361 37.5443 315.361 42.1077C315.361 51.7786 310.102 56.5474 301.524 56.5474H280.148V4.70215H301.843C310.483 4.70215 314.777 9.67108 314.777 19.5422ZM302.63 46.5428C304.644 46.5428 305.943 45.1312 305.943 41.9742C305.943 37.6778 304.495 35.6604 302.109 35.6604H289.436V46.5428H302.63ZM302.109 25.5891C304.775 25.5891 305.161 23.9105 305.161 20.1479C305.161 16.3853 304.123 14.64 302.109 14.64H289.503V25.5891H302.109Z" fill="white"/>
+            <path d="M357.524 14.5065H337.123C334.264 14.5065 332.835 15.9182 332.835 18.6696V25.5891H355.896V35.6604H332.835V41.502C332.835 44.931 333.941 46.6095 336.148 46.6095H357.586V56.5474H337.64C327.44 56.5474 323.48 51.5117 323.48 40.5626V19.4755C323.48 9.20909 328.029 4.70215 337.969 4.70215H357.524V14.5065Z" fill="white"/>
+            <path d="M395.137 14.64H376.948C373.891 14.64 372.075 16.18 372.075 19.6089C372.075 23.3716 373.244 25.2554 375.649 25.2554H384.342C393.765 25.2554 397.382 30.902 397.382 41.4404C397.382 51.5168 392.316 56.5525 382.246 56.5525H364.082V46.6095H383.575C386.627 46.6095 388.119 44.7924 388.119 41.2351C388.119 36.6152 386.95 35.26 384.352 35.26H376.364C366.748 35.26 362.913 30.2244 362.913 19.5422C362.913 9.60435 367.333 4.70215 378.18 4.70215H395.137V14.64Z" fill="white"/>
+            <path d="M436 14.64H422.96V56.5474H413.736V14.64H401.763V4.70215H436V14.64Z" fill="white"/>
+            <path d="M179.8 101.763C181.365 103.424 182.119 105.284 181.985 107.158C181.985 109.986 180.677 112.158 178.06 113.718C175.444 115.278 171.677 116 166.641 116H148V83H165.542C170.068 83 173.582 83.729 176.085 85.1869C178.584 86.6448 179.84 88.7515 179.84 91.4559C179.919 93.0513 179.351 94.6361 178.178 96.0921C177.211 97.2785 175.619 98.2727 173.613 98.9424C176.255 99.3985 178.475 100.41 179.8 101.763ZM152.33 85.8721V97.8343H165.28C166.67 97.8833 168.062 97.7728 169.372 97.5094C170.682 97.2461 171.88 96.8357 172.893 96.3035C174.624 95.0204 175.56 93.4585 175.56 91.8532C175.56 90.2479 174.624 88.6861 172.893 87.4029C171.88 86.8708 170.682 86.4603 169.372 86.197C168.062 85.9337 166.67 85.8231 165.28 85.8721H152.33ZM174.921 111.583C176.779 110.584 177.707 109.009 177.707 106.873C177.707 102.762 174.027 100.706 166.667 100.706H152.278V113.099H166.667C170.303 113.094 173.046 112.588 174.895 111.583H174.921Z" fill="#C6001A" stroke="#C6001A" stroke-width="3" stroke-miterlimit="10"/>
+            <path d="M193.356 112.385C190.452 109.973 189 106.435 189 101.77V83.0289H193.24V101.603C193.24 105.409 194.3 108.239 196.394 110.113C197.377 110.973 198.731 111.681 200.331 112.172C201.932 112.662 203.727 112.92 205.552 112.92C207.376 112.92 209.172 112.662 210.772 112.172C212.373 111.681 213.727 110.973 214.71 110.113C216.817 108.239 217.864 105.409 217.864 101.603V83H222V101.741C222 106.386 220.557 109.925 217.67 112.356C216.336 113.477 214.529 114.396 212.408 115.032C210.287 115.667 207.919 116 205.513 116C203.107 116 200.739 115.667 198.618 115.032C196.497 114.396 194.69 113.477 193.356 112.356V112.385Z" fill="#C6001A" stroke="#C6001A" stroke-width="3" stroke-miterlimit="10"/>
+            <path d="M236.139 115.747C233.653 115.019 231.533 113.9 230 112.506L231.616 109.706C233.056 110.981 234.981 112.025 237.229 112.75C239.44 113.498 241.927 113.896 244.459 113.906C247.954 113.906 250.56 113.343 252.302 112.209C254.094 111.01 255.035 109.43 254.92 107.812C255.015 106.652 254.521 105.502 253.504 104.518C252.611 103.726 251.416 103.076 250.021 102.623C248.171 102.06 246.258 101.577 244.296 101.178C241.879 100.659 239.533 100.026 237.279 99.2833C235.421 98.6058 233.881 97.6496 232.807 96.5064C231.443 94.9506 230.798 93.1998 230.94 91.4395C230.906 89.8102 231.44 88.195 232.506 86.6997C233.506 85.2996 235.167 84.1109 237.279 83.2837C239.688 82.389 242.476 81.9445 245.298 82.0055C249.822 82.0296 254.153 83.1209 257.376 85.0487L255.985 87.9474C254.47 87.0456 252.695 86.3209 250.748 85.8096C249.031 85.3482 247.176 85.1048 245.298 85.0944C241.89 85.0944 239.322 85.6751 237.593 86.8366C235.816 88.08 234.889 89.6882 234.999 91.3329C234.906 92.5036 235.405 93.6637 236.427 94.6576C237.332 95.4668 238.555 96.1259 239.986 96.5749C241.853 97.1263 243.774 97.6091 245.736 98.0204C248.125 98.5185 250.442 99.1343 252.665 99.8615C254.526 100.529 256.072 101.478 257.15 102.616C258.492 104.148 259.125 105.873 258.98 107.606C259.017 109.237 258.479 110.853 257.401 112.346C256.377 113.75 254.678 114.933 252.527 115.739C250.091 116.618 247.29 117.053 244.459 116.995C241.561 116.99 238.708 116.562 236.139 115.747Z" fill="#C6001A" stroke="#C6001A" stroke-width="3" stroke-miterlimit="10"/>
+            <path d="M268 83H273V116H268V83Z" fill="#C6001A" stroke="#C6001A" stroke-width="3" stroke-miterlimit="10"/>
+            <path d="M319 83V116H315.456L289.302 89.2249V116H285V83H288.544L314.698 109.775V83H319Z" fill="#C6001A" stroke="#C6001A" stroke-width="3" stroke-miterlimit="10"/>
+            <path d="M359 112.986V116H330V83H358.09V86.0139H334.363V97.7558H355.56V100.726H334.35V112.986H359Z" fill="#C6001A" stroke="#C6001A" stroke-width="3" stroke-miterlimit="10"/>
+            <path d="M370.927 114.798C368.526 114.093 366.479 113.006 365 111.65L366.557 108.931C367.944 110.169 369.799 111.183 371.965 111.887C374.095 112.614 376.491 113 378.93 113.01C382.298 113.01 384.808 112.463 386.498 111.362C388.217 110.195 389.118 108.661 389.009 107.091C389.106 105.964 388.63 104.846 387.645 103.892C386.787 103.121 385.635 102.489 384.289 102.052C382.507 101.505 380.663 101.036 378.773 100.648C376.447 100.146 374.191 99.5306 372.025 98.8081C370.227 98.1535 368.738 97.2242 367.704 96.1111C366.4 94.5907 365.795 92.8822 365.954 91.1679C365.921 89.5855 366.435 88.0168 367.462 86.5645C368.427 85.2028 370.032 84.0478 372.074 83.2469C374.389 82.3773 377.072 81.9455 379.787 82.0055C381.952 82.0088 384.095 82.2776 386.088 82.7961C388.083 83.2982 389.896 84.0364 391.423 84.9685L390.095 87.7837C388.636 86.9079 386.926 86.204 385.05 85.7074C383.395 85.2593 381.608 85.0229 379.799 85.0128C376.516 85.0128 374.041 85.5769 372.375 86.7049C370.664 87.9125 369.77 89.4745 369.877 91.0718C369.787 92.2089 370.267 93.3355 371.253 94.3008C372.124 95.0867 373.302 95.7268 374.681 96.1628C376.483 96.6996 378.338 97.1684 380.234 97.5668C382.53 98.0518 384.758 98.6498 386.897 99.3549C388.69 100.003 390.179 100.925 391.218 102.03C392.511 103.518 393.12 105.193 392.98 106.877C393.016 108.46 392.498 110.03 391.459 111.48C390.473 112.844 388.836 113.992 386.764 114.776C384.416 115.629 381.719 116.052 378.99 115.995C376.184 116.001 373.417 115.59 370.927 114.798Z" fill="#C6001A" stroke="#C6001A" stroke-width="3" stroke-miterlimit="10"/>
+            <path d="M404.364 115.74C401.786 115.014 399.588 113.895 398 112.499L399.672 109.7C401.161 110.975 403.153 112.018 405.478 112.743C407.766 113.492 410.338 113.889 412.957 113.899C416.573 113.899 419.269 113.336 421.084 112.203C422.929 111.001 423.897 109.422 423.78 107.806C423.884 106.646 423.372 105.495 422.315 104.513C421.395 103.721 420.164 103.071 418.725 102.619C416.806 102.056 414.822 101.573 412.789 101.174C410.291 100.657 407.868 100.023 405.543 99.2796C403.613 98.6058 402.014 97.6491 400.903 96.5033C399.493 94.9479 398.825 93.1974 398.972 91.4375C398.937 89.8086 399.489 88.1937 400.592 86.6988C401.632 85.2985 403.355 84.1101 405.543 83.2835C408.03 82.3884 410.911 81.9439 413.825 82.0057C416.151 82.009 418.451 82.2857 420.591 82.8195C422.733 83.3363 424.68 84.0963 426.32 85.0558L424.881 87.9538C423.314 87.0522 421.478 86.3276 419.464 85.8164C417.687 85.3551 415.768 85.1118 413.825 85.1014C410.3 85.1014 407.643 85.6821 405.854 86.8433C404.02 88.0871 403.065 89.6952 403.184 91.3386C403.084 92.5083 403.595 93.668 404.649 94.6626C405.585 95.4716 406.85 96.1305 408.33 96.5794C410.265 97.1319 412.256 97.6146 414.292 98.0246C416.759 98.5225 419.151 99.1381 421.447 99.8653C423.372 100.533 424.971 101.481 426.087 102.619C427.475 104.151 428.129 105.875 427.979 107.609C428.018 109.238 427.461 110.854 426.346 112.347C425.287 113.751 423.529 114.933 421.304 115.74C418.783 116.618 415.887 117.053 412.957 116.995C409.963 116.987 407.015 116.557 404.364 115.74Z" fill="#C6001A" stroke="#C6001A" stroke-width="3" stroke-miterlimit="10"/>
+            <defs>
+            <linearGradient id="paint0_linear_354_4031" x1="44" y1="89.5223" x2="124" y2="89.5223" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A9000D"/>
+            <stop offset="0.33" stop-color="#A9000D"/>
+            <stop offset="0.52" stop-color="#A9000D"/>
+            <stop offset="0.7" stop-color="#D60021"/>
+            <stop offset="1" stop-color="#A9000D"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_354_4031" x1="97.2374" y1="65.0265" x2="63.451" y2="120.094" gradientUnits="userSpaceOnUse">
+            <stop offset="0.08" stop-color="#8B0013"/>
+            <stop offset="0.14" stop-color="#920014"/>
+            <stop offset="0.23" stop-color="#A50016"/>
+            <stop offset="0.33" stop-color="#C4001A"/>
+            <stop offset="0.44" stop-color="#EF001F"/>
+            <stop offset="0.48" stop-color="#FF0021"/>
+            <stop offset="0.71" stop-color="#DE0021"/>
+            <stop offset="0.91" stop-color="#8B0013"/>
+            </linearGradient>
+            <linearGradient id="paint2_linear_354_4031" x1="19.9697" y1="36.5032" x2="123" y2="36.5032" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A9000D"/>
+            <stop offset="0.33" stop-color="#A9000D"/>
+            <stop offset="0.52" stop-color="#A9000D"/>
+            <stop offset="0.7" stop-color="#D60021"/>
+            <stop offset="1" stop-color="#A9000D"/>
+            </linearGradient>
+            <linearGradient id="paint3_linear_354_4031" x1="83.4825" y1="3.29514" x2="52.0504" y2="53.9843" gradientUnits="userSpaceOnUse">
+            <stop offset="0.08" stop-color="#8B0013"/>
+            <stop offset="0.14" stop-color="#920014"/>
+            <stop offset="0.23" stop-color="#A50016"/>
+            <stop offset="0.33" stop-color="#C4001A"/>
+            <stop offset="0.44" stop-color="#EF001F"/>
+            <stop offset="0.48" stop-color="#FF0021"/>
+            <stop offset="0.71" stop-color="#DE0021"/>
+            <stop offset="0.91" stop-color="#8B0013"/>
+            </linearGradient>
+            <linearGradient id="paint4_linear_354_4031" x1="0" y1="108.997" x2="62" y2="108.997" gradientUnits="userSpaceOnUse">
+            <stop offset="0.04" stop-color="#8B0013"/>
+            <stop offset="0.11" stop-color="#920014"/>
+            <stop offset="0.22" stop-color="#A50016"/>
+            <stop offset="0.35" stop-color="#C4001A"/>
+            <stop offset="0.49" stop-color="#EF001F"/>
+            <stop offset="0.53" stop-color="#FF0021"/>
+            <stop offset="0.65" stop-color="#DE0021"/>
+            <stop offset="1" stop-color="#8B0013"/>
+            </linearGradient>
+            <linearGradient id="paint5_linear_354_4031" x1="1" y1="108.497" x2="62" y2="108.497" gradientUnits="userSpaceOnUse">
+            <stop offset="0.08" stop-color="#8B0013"/>
+            <stop offset="0.18" stop-color="#920015"/>
+            <stop offset="0.32" stop-color="#A50019"/>
+            <stop offset="0.48" stop-color="#C30021"/>
+            <stop offset="0.71" stop-color="#B00021"/>
+            <stop offset="0.91" stop-color="#8B0013"/>
+            </linearGradient>
+            <linearGradient id="paint6_linear_354_4031" x1="43.3546" y1="22.499" x2="44.0659" y2="35.9776" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white"/>
+            <stop offset="0.11" stop-color="#EDEDED" stop-opacity="0.92"/>
+            <stop offset="0.32" stop-color="#BDBDBD" stop-opacity="0.73"/>
+            <stop offset="0.63" stop-color="#707070" stop-opacity="0.42"/>
+            <stop offset="1" stop-color="#0A0A0A" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="paint7_linear_354_4031" x1="24.5492" y1="36.5" x2="50.5492" y2="36.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white"/>
+            <stop offset="0.03" stop-color="#F6F6F6" stop-opacity="0.96"/>
+            <stop offset="0.3" stop-color="#B0B0B0" stop-opacity="0.63"/>
+            <stop offset="0.41" stop-color="#949494" stop-opacity="0.5"/>
+            <stop offset="0.65" stop-color="#515151" stop-opacity="0.26"/>
+            <stop offset="0.87" stop-color="#1D1D1D" stop-opacity="0.07"/>
+            <stop offset="1" stop-color="#0A0A0A" stop-opacity="0"/>
+            </linearGradient>
+            <radialGradient id="paint8_radial_354_4031" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(36.797 31.9326) scale(9.86236 8.28851)">
+            <stop stop-color="white"/>
+            <stop offset="0.09" stop-color="#FCFCFC" stop-opacity="0.9"/>
+            <stop offset="0.34" stop-color="#F4F4F4" stop-opacity="0.61"/>
+            <stop offset="0.57" stop-color="#EEEEEE" stop-opacity="0.38"/>
+            <stop offset="0.76" stop-color="#EAEAEA" stop-opacity="0.21"/>
+            <stop offset="0.91" stop-color="#E7E7E7" stop-opacity="0.11"/>
+            <stop offset="1" stop-color="#E6E6E6" stop-opacity="0.07"/>
+            </radialGradient>
+            </defs>
+            </svg> -->
+            
+        </div>
+
+        <div id="navbar-icons" class="d-flex gap-3 align-items-center">
+          <div
+            onclick="openNavLinksFunc()"
+            id="open-nav-links-btn"
+            class="d-none p-2 rounded"
+          >
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <i class="fa-solid fa-gear"></i>
+          <i class="fa-solid fa-bell"></i>
+          <a href="profile.html">
+            <img
+              style="width: 2.5rem; height: 2.5rem; object-fit: cover"
+              class="rounded-circle"
+              src="./img/pic6.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+      </header>
+      <div id="nav-links-overlay">
+        <div>Overview</div>
+        <div>Subscriptions</div>
+        <div>Streams</div>
+        <div>Library</div>
+      </div>
+    </div>
+    <!-- nav bar end  -->
+
+
+
+
+
+
+    <!-- Container -->
+    <div class="container">
+      <!-- Message Box  -->
+      <div class="messages-box row mb-5" >
+
+
+
+
+<!-- other-friends one -->    
+<div class="other-friends  d-none  d-lg-block  h-100 col-lg-4 col-md-12 col-sm-12 col-10 mx-auto mt-lg-5 border rounded overflow-auto">
+<!-- Active Chate -->
+<div class="active-chats w-100 ">
+
+  <!-- Active Num -->
+  <div
+    class="active-num py-3 px-3 d-flex justify-content-between align-items-center border-bottom"
+  >
+    <div
+      class="d-flex justify-content-between align-items-center w-100"
+    >
+      <div class="d-flex w-100">
+        <h3 class="fs-5 fw-bold mb-0">Active chats</h3>
+        <span class="rounded text-center ms-2">6</span>
+      </div>
+
+      <div class="nav">
+        <div
+          class="nav-icon icon-link icon-link-hover rounded-circle btn pb-3"
+        >
+          <i class="bi bi-pencil-square text-primary"></i>
+        </div>
+      </div>
+      <!-- xxxxxxxx clos buttom  -->
+      <div class="d-flex align-items-center p-3 d-lg-none">
+        <button
+          class="btn-close ms-auto text-reset"
+          type="button"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <!-- xxxxxxxx clos buttom End -->
+    </div>
+  </div>
+  <!-- Active Num End-->
+
+<!-- Search input -->
+<div class="input-group flex-nowrap px-3 py-4 ">
+ <input
+   type="search"
+   class="form-control"
+   placeholder="Search for chats"
+   aria-label="Username"
+   aria-describedby="addon-wrapping"
+ />
+ <span class="input-group-text" id="addon-wrapping">
+   <svg
+     xmlns="http://www.w3.org/2000/svg"
+     width="16"
+     height="16"
+     fill="currentColor"
+     class="bi bi-search"
+     viewBox="0 0 16 16"
+   >
+     <path
+       d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+     />
+   </svg>
+ </span>
+</div>
+<!-- Search input End-->
+
+
+<!-- active-friends -->
+<div class="active-friends ">
+ <!-- friend -->
+ <div
+   class="friend foucus d-flex align-items-center m-auto rounded p-2 mb-3"
+ >
+   <div
+     class="photo col-lg-6 d-flex me-lg-2 border border-2 border-primary rounded-circle"
+   >
+     <img
+       class="img-fluid rounded-circle"
+       src="./img/pic2.jpg"
+       alt=""
+     />
+   </div>
+   <div class="name">
+     <h3 class="fs-6 fw-bold mb-0">Mahmoud QedaiiiiS</h3>
+     <p class="text-black-50 mb-0">
+       Mahmoud QedaiiiiS sent a photo.
+     </p>
+   </div>
+ </div>
+
+ <div
+   class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+ >
+   <div class="photo col-lg-6 d-flex me-lg-2">
+     <img
+       class="img-fluid rounded-circle"
+       src="./img/pic1.jpg"
+       alt=""
+     />
+   </div>
+   <div class="name">
+     <h3 class="fs-6 fw-bold mb-0">Sekoo</h3>
+     <p class="text-black-50 mb-0">You missed a call form🤙</p>
+   </div>
+ </div>
+
+ <div
+   class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+ >
+   <div
+     class="photo col-lg-6 d-flex me-lg-2 border border-2 border-primary rounded-circle"
+   >
+     <img
+       class="img-fluid rounded-circle"
+       src="./img/pic3.jpg"
+       alt=""
+     />
+   </div>
+   <div class="name">
+     <h3 class="fs-6 fw-bold mb-0">Abd el Salam</h3>
+     <p class="text-black-50 mb-0">Day sweetness 😊</p>
+   </div>
+ </div>
+
+ <div
+   class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+ >
+   <div
+     class="photo col-lg-6 d-flex me-lg-2 border border-2 border-primary rounded-circle"
+   >
+     <img
+       class="img-fluid rounded-circle"
+       src="./img/pic4.jpg"
+       alt=""
+     />
+   </div>
+   <div class="name">
+     <h3 class="fs-6 fw-bold mb-0">Mostafa Madany</h3>
+     <p class="text-black-50 mb-0">Okay thanks, everyone.</p>
+   </div>
+ </div>
+
+ <div
+   class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+ >
+   <div class="photo col-lg-6 d-flex me-lg-2">
+     <img
+       class="img-fluid rounded-circle"
+       src="./img/pic5.jpg"
+       alt=""
+     />
+   </div>
+   <div class="name">
+     <h3 class="fs-6 fw-bold mb-0">Amr Tariq</h3>
+     <p class="text-black-50 mb-0">Thank you!</p>
+   </div>
+ </div>
+
+ <div
+   class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+ >
+   <div
+     class="photo col-lg-6 d-flex me-lg-2 border border-2 border-primary rounded-circle"
+   >
+     <img
+       class="img-fluid rounded-circle"
+       src="./img/pic1.jpg"
+       alt=""
+     />
+   </div>
+   <div class="name">
+     <h3 class="fs-6 fw-bold mb-0">Mohammad Samir</h3>
+     <p class="text-black-50 mb-0">I'm adding jhon</p>
+   </div>
+ </div>
+ <div
+   class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+ >
+   <div class="photo col-lg-6 d-flex me-lg-2">
+     <img
+       class="img-fluid rounded-circle"
+       src="./img/pic2.jpg"
+       alt=""
+     />
+   </div>
+   <div class="name">
+     <h3 class="fs-6 fw-bold mb-0">Yousef Fathy</h3>
+     <p class="text-black-50 mb-0">Thank you!</p>
+   </div>
+ </div>
+ <div
+   class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+ >
+   <div class="photo col-lg-6 d-flex me-lg-2">
+     <img
+       class="img-fluid rounded-circle"
+       src="./img/pic4.jpg"
+       alt=""
+     />
+   </div>
+   <div class="name">
+     <h3 class="fs-6 fw-bold mb-0">Moamen Mostafa</h3>
+     <p class="text-black-50 mb-0">Thank you!</p>
+   </div>
+ </div>
+
+ <!-- <div
+   class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+ >
+   <div class="photo col-lg-6 d-flex me-lg-2">
+     <img
+       class="img-fluid rounded-circle"
+       src="./img/pic5.jpg"
+       alt=""
+     />
+   </div>
+   <div class="name">
+     <h3 class="fs-6 fw-bold mb-0">Abanoub Samir</h3>
+     <p class="text-black-50 mb-0">Thank you!</p>
+   </div>
+ </div> -->
+
+
+ 
+</div>
+<!-- active-friends End-->
+
+
+</div>
+<!-- Active Chate End -->
+</div>
+<!-- other-friends one End -->
+
+
+
+
+
+    <!-- other-friends two -->
+     <div class="d-lg-none">
+       <button style="width: 50px; height: 40px;" class="text-black m-3 fw-bold d-flex align-items-center  btn btn-primary " type="button" data-bs-toggle="offcanvas" data-bs-target="#active" aria-controls="active">
+         <i class="bi bi-sliders text-light me-5 fs-5"></i> Chats
+       </button>
+     </div>
+    <div class="other-friends offcanvas offcanvas-start   h-100 col-lg-4 col-md-12 col-sm-12 col-10 mx-auto mt-lg-5 border rounded" id="active">
+    <!-- Active Chate -->
+    <div class="active-chats w-100 ">
+
+      <!-- Active Num -->
+      <div
+        class="active-num py-3 px-3 d-flex justify-content-between align-items-center border-bottom"
+      >
+        <div
+          class="d-flex justify-content-between align-items-center w-100"
+        >
+          <div class="d-flex w-100">
+            <h3 class="fs-5 fw-bold mb-0">Active chats</h3>
+            <span class="rounded text-center ms-2">6</span>
+          </div>
+
+          <div class="nav">
+            <div
+              class="nav-icon icon-link icon-link-hover rounded-circle btn pb-3"
+            >
+              <i class="bi bi-pencil-square text-primary"></i>
+            </div>
+          </div>
+          <!-- xxxxxxxx clos buttom  -->
+          <div class="d-flex align-items-center p-3 d-lg-none">
+            <button
+              class="btn-close ms-auto text-reset"
+              type="button"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <!-- xxxxxxxx clos buttom End -->
+        </div>
+      </div>
+      <!-- Active Num End-->
+
+   <!-- Search input -->
+   <div class="input-group flex-nowrap px-3 py-4 ">
+     <input
+       type="search"
+       class="form-control"
+       placeholder="Search for chats"
+       aria-label="Username"
+       aria-describedby="addon-wrapping"
+     />
+     <span class="input-group-text" id="addon-wrapping">
+       <svg
+         xmlns="http://www.w3.org/2000/svg"
+         width="16"
+         height="16"
+         fill="currentColor"
+         class="bi bi-search"
+         viewBox="0 0 16 16"
+       >
+         <path
+           d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+         />
+       </svg>
+     </span>
+   </div>
+   <!-- Search input End-->
+   
+   
+   <!-- active-friends -->
+   <div class="active-friends ">
+     <!-- friend -->
+     <div
+       class="friend foucus d-flex align-items-center m-auto rounded p-2 mb-3"
+     >
+       <div
+         class="photo col-lg-6 d-flex me-2 border border-2 border-primary rounded-circle"
+       >
+         <img
+           class="img-fluid rounded-circle"
+           src="./img/pic2.jpg"
+           alt=""
+         />
+       </div>
+       <div class="name">
+         <h3 class="fs-6 fw-bold mb-0">Mahmoud QedaiiiiS</h3>
+         <p class="text-black-50 mb-0">
+           Mahmoud QedaiiiiS sent a photo.
+         </p>
+       </div>
+     </div>
+   
+     <div
+       class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+     >
+       <div class="photo col-lg-6 d-flex me-2">
+         <img
+           class="img-fluid rounded-circle"
+           src="./img/pic1.jpg"
+           alt=""
+         />
+       </div>
+       <div class="name">
+         <h3 class="fs-6 fw-bold mb-0">Abanoub Samir</h3>
+         <p class="text-black-50 mb-0">You missed a call form🤙</p>
+       </div>
+     </div>
+   
+     <div
+       class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+     >
+       <div
+         class="photo col-lg-6 d-flex me-2 border border-2 border-primary rounded-circle"
+       >
+         <img
+           class="img-fluid rounded-circle"
+           src="./img/pic3.jpg"
+           alt=""
+         />
+       </div>
+       <div class="name">
+         <h3 class="fs-6 fw-bold mb-0">AbdelRahman Morsy</h3>
+         <p class="text-black-50 mb-0">Day sweetness 😊</p>
+       </div>
+     </div>
+   
+     <div
+       class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+     >
+       <div
+         class="photo col-lg-6 d-flex me-2 border border-2 border-primary rounded-circle"
+       >
+         <img
+           class="img-fluid rounded-circle"
+           src="./img/pic4.jpg"
+           alt=""
+         />
+       </div>
+       <div class="name">
+         <h3 class="fs-6 fw-bold mb-0">Moamen Mostafa</h3>
+         <p class="text-black-50 mb-0">Okay thanks, everyone.</p>
+       </div>
+     </div>
+   
+     <div
+       class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+     >
+       <div class="photo col-lg-6 d-flex me-2">
+         <img
+           class="img-fluid rounded-circle"
+           src="./img/pic5.jpg"
+           alt=""
+         />
+       </div>
+       <div class="name">
+         <h3 class="fs-6 fw-bold mb-0">Mostafa Madany</h3>
+         <p class="text-black-50 mb-0">Thank you!</p>
+       </div>
+     </div>
+   
+     <div
+       class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+     >
+       <div
+         class="photo col-lg-6 d-flex me-2 border border-2 border-primary rounded-circle"
+       >
+         <img
+           class="img-fluid rounded-circle"
+           src="./img/pic1.jpg"
+           alt=""
+         />
+       </div>
+       <div class="name">
+         <h3 class="fs-6 fw-bold mb-0">Yousef Fathy</h3>
+         <p class="text-black-50 mb-0">I'm adding jhon</p>
+       </div>
+     </div>
+     <div
+       class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+     >
+       <div class="photo col-lg-6 d-flex me-2">
+         <img
+           class="img-fluid rounded-circle"
+           src="./img/pic2.jpg"
+           alt=""
+         />
+       </div>
+       <div class="name">
+         <h3 class="fs-6 fw-bold mb-0">Amr Tariq</h3>
+         <p class="text-black-50 mb-0">Thank you!</p>
+       </div>
+     </div>
+     <div
+       class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+     >
+       <div class="photo col-lg-6 d-flex me-2">
+         <img
+           class="img-fluid rounded-circle"
+           src="./img/pic4.jpg"
+           alt=""
+         />
+       </div>
+       <div class="name">
+         <h3 class="fs-6 fw-bold mb-0">Abanoub Samir</h3>
+         <p class="text-black-50 mb-0">Thank you!</p>
+       </div>
+     </div>
+   
+     <div
+       class="friend d-flex align-items-center m-auto rounded p-2 mb-3"
+     >
+       <div class="photo col-lg-6 d-flex me-2">
+         <img
+           class="img-fluid rounded-circle"
+           src="./img/pic5.jpg"
+           alt=""
+         />
+       </div>
+       <div class="name">
+         <h3 class="fs-6 fw-bold mb-0">Abanoub Samir</h3>
+         <p class="text-black-50 mb-0">Thank you!</p>
+       </div>
+     </div>
+   </div>
+   <!-- active-friends End-->
+
+
+    </div>
+    <!-- Active Chate End -->
+  </div>
+    <!-- other-friends two End -->
+
+
+
+
+
+
+
+        <!-- foucs-message -->
+        <div
+          class="foucs-message col-lg-8 col-md-12 col-sm-12 col-10 mx-auto border rounded mt-lg-5 pe-0"
+        >
+          <div class="px-4">
+            <div
+              class="message-nav pt-3 d-flex justify-content-between align-items-center flex-wrap"
+            >
+              <div class="pic-nam d-flex align-items-center mb-sm-2">
+                <div class="photo col-lg-6 d-flex me-2">
+                  <img
+                    class="img-fluid rounded-circle"
+                    src="./img/pic2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="name mb-3 mb-lg-0 m-md-0 m-sm-0">
+                  <h3 class="fs-5 fw-bold mb-0">Mahmoud QedaiiiiS</h3>
+                  <span>Online</span>
+                </div>
+              </div>
+
+              <div class="call d-flex align-items-center col-lg-3 mt-sm-2">
+                <div
+                  class="nav-icon icon-link icon-link-hover rounded-circle btn me-3 pb-3"
+                >
+                  <i class="bi bi-telephone-fill text-primary"></i>
+                </div>
+
+                <div
+                  class="nav-icon icon-link icon-link-hover rounded-circle btn me-3 pb-3"
+                >
+                  <i class="bi bi-camera-video-fill text-primary"></i>
+                </div>
+
+                <div
+                  class="nav-icon icon-link icon-link-hover rounded-circle btn me-3 pb-3"
+                >
+                  <i class="bi bi-three-dots-vertical text-primary"></i>
+                </div>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="chat">
+              <div class="date text-center border-0">
+                <p>Jul 16, 2022, 06:15</p>
+              </div>
+
+              <div class="sender d-flex align-items-start mb-3 me-3">
+                <img
+                  class="img-fluid rounded-circle me-2"
+                  src="./img/pic2.jpg"
+                />
+                <div class="text">
+                  <p class="form-control mb-0 border-0">
+                    Applauded no discovery in newspaper allowance am northward😊
+                  </p>
+                  <span>6:15 AM</span>
+                </div>
+              </div>
+
+              <div
+                class="me d-flex align-items-end justify-content-end text-end"
+              >
+                <div>
+                  <p class="text1 form-control bg-primary text-light border-0">
+                    With pleasure
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="me d-flex align-items-end justify-content-end text-end mb-3"
+              >
+                <div>
+                  <p
+                    class="text2 form-control mb-0 bg-primary text-light border-0"
+                  >
+                    No visited raising gravity outward subject my cottage Mr be.
+                  </p>
+                  <span>6:15 AM</span>
+                </div>
+              </div>
+
+              <div class="sender d-flex align-items-start mb-3">
+                <img
+                  class="img-fluid rounded-circle me-2"
+                  src="./img/pic2.jpg"
+                />
+                <div class="text">
+                  <p class="form-control mb-0 border-0">
+                    Please find the attached updated files
+                  </p>
+                  <span>12:16 PM</span>
+                </div>
+              </div>
+
+              <div class="sender d-flex align-items-start mb-3">
+                <img
+                  class="img-fluid rounded-circle me-2"
+                  src="./img/pic2.jpg"
+                />
+                <div class="text">
+                  <p class="form-control mb-0 border-0">
+                    How promotion excellent curiosity yet attempted happiness
+                    Gayprosperous impression😮
+                  </p>
+                  <span>3:22 PM</span>
+                </div>
+              </div>
+
+              <div class="sender d-flex align-items-start mb-3">
+                <img
+                  class="img-fluid rounded-circle me-2"
+                  src="./img/pic2.jpg"
+                />
+                <div class="text">
+                  <p
+                    class="form-control mb-0 d-flex flex-column align-items-center p-2 border-0"
+                  >
+                    Congratulations:)
+                    <img class="img-fluid" src="./img/hand.png" alt="" />
+                  </p>
+                  <span>3:22 PM</span>
+                </div>
+              </div>
+
+              <div
+                class="me d-flex align-items-end justify-content-end text-end mb-3"
+              >
+                <div>
+                  <p
+                    class="text3 form-control mb-0 bg-primary text-light border-0"
+                  >
+                    And sir dare view but over man So at within mr to simple
+                    assure Mr disposing.
+                  </p>
+                  <p>5:35 PM</p>
+                </div>
+              </div>
+
+              <div
+                class="me text-end justify-content-end d-flex flex-column align-items-end mb-3"
+              >
+                <img class="img-fluid rounded" src="./img/pic3.jpg" alt="" />
+                <span>5:35 PM</span>
+              </div>
+
+              <div class="sender d-flex align-items-start mb-3">
+                <img
+                  class="img-fluid rounded-circle me-2"
+                  src="./img/pic2.jpg"
+                />
+                <div class="text">
+                  <p class="form-control mb-0 border-0">
+                    Traveling alteration impression 🤐 six all uncommonly
+                    Chamber hearing inhabit joy highest private.
+                  </p>
+                  <span>3:22 PM</span>
+                </div>
+              </div>
+
+              <div class="sender d-flex align-items-start mb-3">
+                <img
+                  class="img-fluid rounded-circle me-2"
+                  src="./img/pic2.jpg"
+                />
+                <div
+                  class="typing d-flex justify-content-center align-items-center rounded form-control border-0"
+                >
+                  <div class="typing1 bg-secondary rounded-circle"></div>
+                  <div class="typing2 bg-secondary rounded-circle"></div>
+                  <div class="typing3 bg-secondary rounded-circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <!-- Typing Zone -->
+          <div class="typing-zone mx-auto p-lg-4 p-sm-4 pe-4 flex-sm-nowrap flex-lg-nowrap flex-md-nowrap row border-top d-flex w-100 align-items-center">
+            
+            <div class="col-lg-9 col-md-9 col-sm-8 col-12   my-2 mb-lg-0">
+
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Type a message"
+              />
+            </div>
+
+
+
+          
+          <div class="typing-icons d-flex          col-lg-2 col-md-5 cpl-sm-6  mb-lg-0 mb-md-0 mb-sm-0 mb-2">
+
+                   <div class="emoji btn  icon-link icon-link-hover pb-3 me-2 ">
+                     <i class="bi bi-emoji-smile-fill text-danger"></i>
+                   </div>
+       
+                   <div class="clip btn  icon-link icon-link-hover pb-3 me-2">
+                     <i class="bi bi-paperclip text-black"></i>
+                   </div>
+       
+                   <div
+                     class="btn btn-primary icon-link icon-link-hover pb-3"
+                   >
+                     <i class="bi bi-send-check-fill"></i>
+                   </div>
+                 </div>
+          </div>
+          <!-- Typing Zone End-->
+
+
+
+        </div>
+        <!-- foucs-message End -->
+
+
+      </div>
+      <!-- Message Box End -->
+    </div>
+    <!-- Container End -->
+
+    <script src="./Assists/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
